@@ -20,7 +20,7 @@ def snapshot_mesh(mesh, width=800, height=600, out_path="snapshot.png"):
     scene = pyrender.Scene()
     scene.add(pyrender.Mesh.from_trimesh(mesh))
     r = pyrender.OffscreenRenderer(viewport_width=width,
-                                   viewport_height=height)  # :contentReference[oaicite:2]{index=2}
+                                   viewport_height=height)  
     color, _ = r.render(scene)
     r.delete()
     imageio.imsave(out_path, color)
