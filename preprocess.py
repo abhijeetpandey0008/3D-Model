@@ -40,13 +40,13 @@ def estimate_depth(img, model_type="DPT_Large"):
     """
     # Load MiDaS model from PyTorch Hub
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    midas = torch.hub.load("intel-isl/MiDaS", model_type)      # :contentReference[oaicite:2]{index=2}
+    midas = torch.hub.load("intel-isl/MiDaS", model_type)      
     midas.to(device).eval()
 
     # Load transforms for the chosen model type
     midas_transforms = torch.hub.load("intel-isl/MiDaS", "transforms")
     if model_type in ("DPT_Large", "DPT_Hybrid"):
-        transform = midas_transforms.dpt_transform               # :contentReference[oaicite:3]{index=3}
+        transform = midas_transforms.dpt_transform               
     else:
         transform = midas_transforms.small_transform
 
