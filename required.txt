@@ -1,0 +1,8 @@
+opencv-python
+numpy
+torch
+torchvision
+trimesh
+pyrender
+imageio
+transformers
